@@ -21,7 +21,7 @@ const Header = styled.div`
 
 const AppHeader = () => {
     return (
-        <Header colored as='a'>
+        <Header colored>
             <h1>Igor</h1>
             <h2>5 записей, понравилось 0</h2>
 

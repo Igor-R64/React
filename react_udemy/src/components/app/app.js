@@ -70,10 +70,23 @@ export default class App extends Component {
     }
 
     onToggleLiked(id) {
-        console.log(`like ${id}`);
+        this.setState(({data}) =>{
+            const index = data.findIndex(elem => elem.id === id);
+
+            const old = data[index];
+            const newItem = {...old, like: !old.like};
+            const newArr = [...data.slice(0, index),newItem, ... data.slice(index + 1)];
+
+            return {
+                data: newArr
+            }
+
+        })
     }
 
 render() {
+
+
     return (
         <div className="app">
             <AppHeader/>

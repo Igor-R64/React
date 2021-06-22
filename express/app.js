@@ -14,7 +14,7 @@ app.use(function(request, response, next){
     next();
 });
  
-app.get("/", function(request, response){
-    response.send([{id: 1, title: "zalupa"}, {id: 2, title: "zalupa2"}]);
+app.get("/api/goods", function(request, response){
+    response.send([{id: 1, title: "Trigrim"}, {id: 2, title: "Omez"}]);
 });
 app.listen(3000);
